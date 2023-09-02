@@ -1,5 +1,5 @@
 # Codes_GenomeAnnotation
-This repository contains the scripts used for genome assembly gap filling and annotation. The gap-filling levereaged HIFI PacBio long reads to improve the genome completeness. 
+This repository contains multiple bash, python and R scripts used for genome assembly gap filling and annotation. The gap-filling levereaged HIFI PacBio long reads to improve the genome completenes. The protein-coding genes was built using multi-stage RNA-seq libraries.
 
 In **1_1_Assembly_gapfilling.ipynb** are the files and scripts used:
 
@@ -28,7 +28,7 @@ In **2_3_Genome_annotation_CodingGenes.ipynb** are the steps to run the transcri
 - Map RNA-seq libraries to the reference genome using *HISAT2*
 - To use *StringTie2* to generate the transcriptome. First, the RNA-seq reads were assembled into transcripts for each sample. Then, all sample-specific annotations were merged into one final annotation
 
-In **2_4_CodingGenes_Annotation_analysis.ipynb** are the steps to run the annotation of protein-coding genes. The analyses run include:
+In **2_4_CodingGenes_Annotation_analysis.ipynb** are the steps to run the identification of protein-coding genes. The analyses run include:
 - Reduce redundancy of annotated transcripts using CD-HIT
 - ORF identification with TransDecoder
 - Pfam and BlastP searches to enable homology-based coding region identification
@@ -37,21 +37,13 @@ In **2_4_CodingGenes_Annotation_analysis.ipynb** are the steps to run the annota
 - Final coding region predictions
 - Select representattive transcript per gene
 
+In **2_5_BLAST_and_Orthofinder.ipynb** are the steps to run the annotation of protein-coding genes using *BLAST* and *ORTHOFINDER*. The analyses run include:
+- Download proteomes from UNIPROT
+- Blast Parhyale proteins to multiple species peptides
+- Run Orhofinder analysis
+
+In **2_8_Process_MappingStats.ipynb** are the steps to summarise RNA-seq maping metrics
   
-
-
-In **1_2_GenomeAssembly_analysis.ipynb** are the files and scripts used:
-- To run InterproScan software to identify protein domains
-
-In **Identification_Parhyale_germline_transcripts.nb** are the files and scripts used: 
-- Identify asymmetrically localised transcripts in each 8-cell stage blastomere
-- To estimate FoldChange expression between target blastomer and the other 7. The SD was used to define and enrichment threshold
-- To use the SD threshold to call enriched transcripts.
-- To visualise the expression of blastomere specific genes using clustering methods at both 4- and 8- cell stages
-- To visualise the expression of blastomere specific genes using clustering methods acroos multiple developmental time-points
-- To summarise and visualise specific genes average expressiona across embryogenesis
-- To analyse MEME suite motif enrichment output. This part aimed to summarise the location ot known and unknown RNA-binding sites within blastomer-specific 3UTR
-
 Please email *alexjapes@gmail.com* if there is any problem, thanks! (Manuel)
 
 [This](https://htmlpreview.github.io/) is a tool to view the html files. 
