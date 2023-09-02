@@ -25,11 +25,11 @@ In **2_2_TEannotation_analysis.ipynb** are the files and scripts to:
 
 In **2_3_Genome_annotation_CodingGenes.ipynb** are the steps to run the transcriptome assembly based on 79 PolyA RNA-seq libraries. Briefly, we integrated 79 RNA-seq samples and current Parhyale reference annotation into a StringTie2 annotation pipeline. Some analyses include:
 - To use *GMAP* to map reference transcriptome to current assembly
-- Map RNA-seq libraries to the reference genome using *HISAT2*
+- Map RNA-seq libraries to the reference genome using *HISAT2* (http://daehwankimlab.github.io/hisat2/)
 - To use *StringTie2* to generate the transcriptome. First, the RNA-seq reads were assembled into transcripts for each sample. Then, all sample-specific annotations were merged into one final annotation
 
 In **2_4_CodingGenes_Annotation_analysis.ipynb** are the steps to run the identification of protein-coding genes. The analyses run include:
-- Reduce redundancy of annotated transcripts using CD-HIT
+- Reduce redundancy of annotated transcripts using CD-HIT (https://www.bioinformatics.org/cd-hit/)
 - ORF identification with TransDecoder
 - Pfam and BlastP searches to enable homology-based coding region identification
 -   Run Pfam search on longest ORFs
@@ -39,8 +39,8 @@ In **2_4_CodingGenes_Annotation_analysis.ipynb** are the steps to run the identi
 
 In **2_5_BLAST_and_Orthofinder.ipynb** are the steps to run the annotation of protein-coding genes using *BLAST* and *ORTHOFINDER*. The analyses run include:
 - Download proteomes from UNIPROT
-- Blast Parhyale proteins to multiple species peptides
-- Run Orhofinder analysis
+- Blast Parhyale proteins to multiple species peptides (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html)
+- Run Orhofinder analysis (https://github.com/davidemms/OrthoFinder)
 
 In **2_8_Process_MappingStats.ipynb** are the steps to summarise RNA-seq maping metrics
   
