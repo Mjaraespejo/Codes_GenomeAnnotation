@@ -25,6 +25,8 @@ In **2_2_TEannotation_analysis.ipynb** are the files and scripts to:
 
 In **2_3_Genome_annotation_CodingGenes.ipynb** are the steps to run the transcriptome assembly based on 79 PolyA RNA-seq libraries. Briefly, we integrated 79 RNA-seq samples and current Parhyale reference annotation into a StringTie2 annotation pipeline. Some analyses include:
 - To use *GMAP* to map reference transcriptome to current assembly
+- Quality check of RNA-seq libraries using FASTQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- Reads trimming using *Trimmomatic* software (https://bioinformatics-core-shared-training.github.io/Bulk_RNAseq_Course_Nov22/Bulk_RNAseq_Course_Base/Markdowns/S3_Trimming_Reads.html)
 - Map RNA-seq libraries to the reference genome using *HISAT2* (http://daehwankimlab.github.io/hisat2/)
 - To use *StringTie2* to generate the transcriptome. First, the RNA-seq reads were assembled into transcripts for each sample. Then, all sample-specific annotations were merged into one final annotation
 
